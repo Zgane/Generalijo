@@ -56,17 +56,8 @@ header {
   font-size: 18px;
 }
 
-h1 {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.subtitle {
-  font-size: 14px;
-  color: var(--muted);
-  margin-top: 4px;
-}
+h1 { font-size: 22px; font-weight: 700; color: var(--text); }
+.subtitle { font-size: 14px; color: var(--muted); margin-top: 4px; }
 
 .card {
   background: var(--surface);
@@ -79,9 +70,6 @@ h1 {
   animation: fadeUp 0.5s ease both;
 }
 
-.card:nth-child(2) { animation-delay: 0.05s; }
-.card:nth-child(3) { animation-delay: 0.1s; }
-
 .card-title {
   font-size: 13px;
   font-weight: 600;
@@ -89,6 +77,94 @@ h1 {
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 16px;
+}
+
+/* API Key section */
+.api-section {
+  background: var(--red-light);
+  border: 1px solid var(--red-mid);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.api-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.api-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--red);
+}
+
+.api-status {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.api-status.ok { background: var(--green-light); color: var(--green); }
+.api-status.missing { background: var(--red-light); color: var(--red); }
+
+.api-input-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.api-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--red-mid);
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: white;
+  color: var(--text);
+  outline: none;
+}
+
+.api-input:focus { border-color: var(--red); }
+
+.btn-save-key {
+  padding: 10px 16px;
+  background: var(--red);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.btn-save-key:hover { opacity: 0.85; }
+
+.btn-delete-key {
+  padding: 6px 12px;
+  background: transparent;
+  color: var(--red);
+  border: 1px solid var(--red-mid);
+  border-radius: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+
+.btn-delete-key:hover { background: var(--red); color: white; }
+
+.api-hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
 }
 
 /* Upload zone */
@@ -118,18 +194,8 @@ h1 {
 }
 
 .upload-icon { font-size: 36px; margin-bottom: 12px; }
-
-.upload-text {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--red);
-  margin-bottom: 4px;
-}
-
-.upload-sub {
-  font-size: 13px;
-  color: var(--muted);
-}
+.upload-text { font-size: 16px; font-weight: 600; color: var(--red); margin-bottom: 4px; }
+.upload-sub { font-size: 13px; color: var(--muted); }
 
 .file-selected {
   display: none;
@@ -143,20 +209,9 @@ h1 {
 }
 
 .file-selected.show { display: flex; }
+.file-icon { font-size: 24px; flex-shrink: 0; }
+.file-name { font-size: 14px; font-weight: 500; color: var(--green); word-break: break-all; }
 
-.file-icon {
-  font-size: 24px;
-  flex-shrink: 0;
-}
-
-.file-name {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--green);
-  word-break: break-all;
-}
-
-/* Button */
 .btn {
   width: 100%;
   padding: 16px;
@@ -175,13 +230,7 @@ h1 {
 .btn:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
 .btn:disabled { opacity: 0.4; cursor: default; }
 
-/* Loading */
-.loading {
-  display: none;
-  text-align: center;
-  padding: 24px;
-}
-
+.loading { display: none; text-align: center; padding: 24px; }
 .loading.show { display: block; }
 
 .spinner {
@@ -194,19 +243,9 @@ h1 {
   margin: 0 auto 12px;
 }
 
-.loading-text {
-  font-size: 14px;
-  color: var(--muted);
-}
+.loading-text { font-size: 14px; color: var(--muted); }
 
-/* Result */
-.result-card {
-  display: none;
-  max-width: 600px;
-  margin: 0 auto;
-  animation: fadeUp 0.4s ease both;
-}
-
+.result-card { display: none; max-width: 600px; margin: 0 auto; animation: fadeUp 0.4s ease both; }
 .result-card.show { display: block; }
 
 .tip-badge {
@@ -239,11 +278,7 @@ h1 {
   margin-bottom: 4px;
 }
 
-.zadeva-text {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-}
+.zadeva-text { font-size: 15px; font-weight: 600; color: var(--text); }
 
 .mail-body {
   background: #f8f9fb;
@@ -295,7 +330,6 @@ h1 {
 
 .btn-novo:hover { border-color: var(--red); color: var(--red); }
 
-/* Error */
 .error-box {
   display: none;
   background: var(--red-light);
@@ -314,9 +348,7 @@ h1 {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
+@keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
@@ -329,8 +361,25 @@ h1 {
   <p class="subtitle">Naloži polico → dobiš mail</p>
 </header>
 
-<!-- Upload card -->
 <div class="card" id="uploadCard">
+  <div class="card-title">Nastavitve</div>
+
+  <!-- API Key -->
+  <div class="api-section">
+    <div class="api-header">
+      <div class="api-label">🔑 Anthropic API ključ</div>
+      <div class="api-status" id="apiStatus">⚠️ Ni nastavljen</div>
+    </div>
+    <div class="api-input-wrap" id="apiInputWrap">
+      <input type="password" class="api-input" id="apiKeyInput" placeholder="sk-ant-api03-..." />
+      <button class="btn-save-key" onclick="shraniKljuc()">Shrani</button>
+    </div>
+    <div id="apiSavedWrap" style="display:none">
+      <button class="btn-delete-key" onclick="izbrisiKljuc()">🗑️ Odstrani ključ</button>
+    </div>
+    <div class="api-hint">Ključ se shrani samo na tem telefonu/brskalniku. Nikoli ni poslan nikamor razen Anthropic API.</div>
+  </div>
+
   <div class="card-title">Naloži polico</div>
 
   <div class="upload-zone" id="uploadZone">
@@ -352,13 +401,11 @@ h1 {
   </button>
 </div>
 
-<!-- Loading -->
 <div class="card loading" id="loadingCard">
   <div class="spinner"></div>
   <div class="loading-text">Berem polico in sestavljam mail...</div>
 </div>
 
-<!-- Result -->
 <div class="result-card card" id="resultCard">
   <div class="card-title">Sestavljen mail</div>
   <span class="tip-badge" id="tipBadge"></span>
@@ -376,25 +423,61 @@ let selectedFile = null;
 let generatedMail = '';
 let generatedZadeva = '';
 
+// API ključ
+function shraniKljuc() {
+  const key = document.getElementById('apiKeyInput').value.trim();
+  if (!key.startsWith('sk-ant')) {
+    alert('Ključ mora začeti s "sk-ant..."');
+    return;
+  }
+  localStorage.setItem('generali_api_key', key);
+  posodobiApiUI();
+  document.getElementById('apiKeyInput').value = '';
+}
+
+function izbrisiKljuc() {
+  if (confirm('Res želite odstraniti API ključ?')) {
+    localStorage.removeItem('generali_api_key');
+    posodobiApiUI();
+  }
+}
+
+function posodobiApiUI() {
+  const key = localStorage.getItem('generali_api_key');
+  const status = document.getElementById('apiStatus');
+  const inputWrap = document.getElementById('apiInputWrap');
+  const savedWrap = document.getElementById('apiSavedWrap');
+
+  if (key) {
+    status.textContent = '✅ Nastavljen';
+    status.className = 'api-status ok';
+    inputWrap.style.display = 'none';
+    savedWrap.style.display = 'block';
+  } else {
+    status.textContent = '⚠️ Ni nastavljen';
+    status.className = 'api-status missing';
+    inputWrap.style.display = 'flex';
+    savedWrap.style.display = 'none';
+  }
+  osvežiGumb();
+}
+
+function osvežiGumb() {
+  const key = localStorage.getItem('generali_api_key');
+  document.getElementById('generateBtn').disabled = !selectedFile || !key;
+}
+
+// Datoteka
 const fileInput = document.getElementById('fileInput');
 const uploadZone = document.getElementById('uploadZone');
-const fileSelected = document.getElementById('fileSelected');
-const fileName = document.getElementById('fileName');
-const generateBtn = document.getElementById('generateBtn');
-const errorBox = document.getElementById('errorBox');
 
-// Drag & drop
 uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag'); });
 uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag'));
 uploadZone.addEventListener('drop', e => {
   e.preventDefault();
   uploadZone.classList.remove('drag');
   const file = e.dataTransfer.files[0];
-  if (file && file.type === 'application/pdf') izbranaDatoteka(file);
-});
-
-fileInput.addEventListener('change', e => {
-  if (e.target.files[0]) izbranaDataoteka(e.target.files[0]);
+  if (file) izbranaDataoteka(file);
 });
 
 fileInput.addEventListener('change', e => {
@@ -403,68 +486,59 @@ fileInput.addEventListener('change', e => {
 
 function izbranaDataoteka(file) {
   selectedFile = file;
-  fileName.textContent = file.name;
-  fileSelected.classList.add('show');
-  generateBtn.disabled = false;
-  errorBox.classList.remove('show');
+  document.getElementById('fileName').textContent = file.name;
+  document.getElementById('fileSelected').classList.add('show');
+  document.getElementById('errorBox').classList.remove('show');
+  osvežiGumb();
 }
 
 async function generiraj() {
-  if (!selectedFile) return;
+  const apiKey = localStorage.getItem('generali_api_key');
+  if (!apiKey || !selectedFile) return;
 
-  // Pokaži loading
   document.getElementById('uploadCard').style.display = 'none';
   document.getElementById('loadingCard').classList.add('show');
   document.getElementById('resultCard').classList.remove('show');
-  errorBox.classList.remove('show');
+  document.getElementById('errorBox').classList.remove('show');
 
   try {
-    // Preberi PDF kot base64
     const base64 = await beriPdfBase64(selectedFile);
 
-    // Pošlji Claudu
     const prompt = `Si zavarovalni asistent za Generali zavarovalnico. Preberi priloženo PDF polico in sestavi profesionalen mail za stranko.
 
 PRAVILA ZA MAIL:
 
 ZADEVA: "Obnova avtomobilskega zavarovanja – [ZNAMKA MODEL] [REGISTRSKA]" za avto, ali "Zavarovanje nepremičnine – [NASLOV]" za dom.
 
-TELO MAILA - točno ta format, nič drugega:
-
-Za AVTO polico:
-Pozdravljeni,
-
-spodaj sem vam pripravil povzetek zavarovanja vašega avtomobila [ZNAMKA MODEL] ([REGISTRSKA]), ki velja od [DATUM_OD] do [DATUM_DO].
+Za AVTO polico sestavi mail s tema sekcijama:
 
 OBVEZNA ZAVAROVANJA
-
 - AO – avtomobilska odgovornost
-  ↳ stvari do [ZV_STVARI]€ / osebe do [ZV_OSEBE]€ + zelena karta
+  ↳ stvari do [ZV]€ / osebe do [ZV]€ + zelena karta
 - AO+ – zavarovanje voznika (če je na polici)
-  ↳ telesne poškodbe do [ZV_AO_PLUS]€
-- ⚠️ Vključen zamrznjen bonus – prva škoda ne vpliva na vaš premijski razred (SAMO če piše AO-ZAMRZNJEN)
+  ↳ telesne poškodbe do [ZV]€
+- ⚠️ Vključen zamrznjen bonus – prva škoda ne vpliva na vaš premijski razred (SAMO če piše AO-ZAMRZNJEN na polici)
 - Nezgoda – nezgodno zavarovanje oseb (če je na polici)
-  ↳ smrt [ZV_SMRT]€ / invalidnost [ZV_INV]€ po osebi, vsi potniki
+  ↳ smrt [ZV]€ / invalidnost [ZV]€ po osebi, vsi potniki
 - Pravna zaščita (če je na polici)
-  ↳ do [ZV_PZ]€
+  ↳ do [ZV]€
 - Asistenca [VARIANTA] (če je na polici)
   ↳ pomoč na cesti do [KM] km, nadomestno vozilo do 3 dni pri okvari
   POMEMBNO: Asistenca L = 500 km, Asistenca M = 300 km
 
 KASKO ZAVAROVANJE (samo če je na polici)
-
-- ⚠️ Vključen odkup prve škode – prva škoda ne vpliva na vaš premijski razred (samo če piše "odkup prve škode AK")
+- ⚠️ Vključen odkup prve škode – prva škoda ne vpliva na vaš premijski razred (samo če piše odkup prve škode AK)
 - Prometna nesreča
-  ↳ franšiza [X]% (~[EUR]€) ALI brez franšize
+  ↳ franšiza [X]% (~[EUR]€) ALI brez franšize če je 0%
 - Požar
   ↳ brez franšize
 - Narava (vihar, poplave, potres...)
   ↳ brez franšize
 - Zlonamerna in objestna dejanja
   ↳ brez franšize
-- Toča (delni kasko) (samo če je delni kasko toča)
+- Toča (delni kasko) — samo če je delni kasko toča na polici
   ↳ brez franšize
-- Kraja (delni kasko) (samo če je delni kasko kraja)
+- Kraja (delni kasko) — samo če je delni kasko kraja na polici
   ↳ brez franšize
 - Parkirišče
   ↳ franšiza [X]% (~[EUR]€) ALI brez franšize
@@ -475,25 +549,10 @@ KASKO ZAVAROVANJE (samo če je na polici)
 - Živali
   ↳ franšiza [X]% (~[EUR]€) ALI brez franšize
 
-SKUPNA LETNA PREMIJA: [PREMIJA]€
-
-Sem vam na voljo za vsa vprašanja.
-
-Lep pozdrav,
-
-Žan Mažgon
-Zavarovalni zastopnik | Generali zavarovalnica d.d.
-
----
-
-Za DOM polico (Paket Dom):
-Pozdravljeni,
-
-spodaj sem vam pripravil povzetek zavarovanja vašega stanovanja na naslovu [NASLOV], ki velja od [DATUM_OD] do [DATUM_DO].
+Za DOM polico (Paket Dom) sestavi mail s tema sekcijama:
 
 PODATKI O STANOVANJU
-
-- Stanovanje v [TIP], [IZVEDBA]
+- Stanovanje v [TIP], [izvedba]
   ↳ leto izgradnje: [LETO]
 - Število gospodinjstev: [ST]
 - Material nosilne konstrukcije: [MATERIAL]
@@ -506,19 +565,19 @@ PODATKI O STANOVANJU
   ↳ koristna površina skupaj: [M2] m²
 
 PONUDBA
-
-- Zavarovanje nepremičnine (samo če je sklop 1)
+- Zavarovanje nepremičnine (če je sklop 1)
   ↳ način zavarovanja: [NACIN]
   ↳ zavarovalna vsota: [ZV]€
   ↳ kritja: osnovni paket – podrobnosti v priloženi brošuri
-- Zavarovanje premičnin (samo če je sklop 2)
+- Zavarovanje premičnin (če je sklop 2)
   ↳ način zavarovanja: [NACIN]
   ↳ zavarovalna vsota: [ZV]€
   ↳ kritja: osnovni paket – podrobnosti v priloženi brošuri
-- Zavarovanje odgovornosti zasebnika in hišne odgovornosti (samo če je sklop 5)
+- Zavarovanje odgovornosti zasebnika in hišne odgovornosti (če je sklop 5)
   ↳ zavarovalna vsota: [ZV]€
   ↳ franšiza: brez
 
+KONEC MAILA JE VEDNO:
 SKUPNA LETNA PREMIJA: [PREMIJA]€
 
 Sem vam na voljo za vsa vprašanja.
@@ -528,24 +587,24 @@ Lep pozdrav,
 Žan Mažgon
 Zavarovalni zastopnik | Generali zavarovalnica d.d.
 
----
-
-VRNI SAMO JSON v tem formatu, brez kakršnegakoli drugega besedila:
-{"tip": "avto" ali "dom", "zadeva": "...", "mail": "..."}`;
+VRNI SAMO JSON brez kakršnegakoli drugega besedila ali markdown:
+{"tip": "avto", "zadeva": "...", "mail": "..."}`;
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "anthropic-dangerous-allow-browser": "true"
+      },
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
-        max_tokens: 1000,
+        max_tokens: 1500,
         messages: [{
           role: "user",
           content: [
-            {
-              type: "document",
-              source: { type: "base64", media_type: "application/pdf", data: base64 }
-            },
+            { type: "document", source: { type: "base64", media_type: "application/pdf", data: base64 } },
             { type: "text", text: prompt }
           ]
         }]
@@ -553,7 +612,6 @@ VRNI SAMO JSON v tem formatu, brez kakršnegakoli drugega besedila:
     });
 
     const data = await response.json();
-
     if (!response.ok) throw new Error(data.error?.message || 'API napaka');
 
     const text = data.content.map(i => i.text || '').join('');
@@ -563,7 +621,6 @@ VRNI SAMO JSON v tem formatu, brez kakršnegakoli drugega besedila:
     generatedZadeva = parsed.zadeva;
     generatedMail = parsed.mail;
 
-    // Pokaži rezultat
     document.getElementById('loadingCard').classList.remove('show');
     document.getElementById('tipBadge').textContent = parsed.tip === 'avto' ? '🚗 Avtomobilsko' : '🏠 Dom';
     document.getElementById('zadeva').textContent = parsed.zadeva;
@@ -573,6 +630,7 @@ VRNI SAMO JSON v tem formatu, brez kakršnegakoli drugega besedila:
   } catch (err) {
     document.getElementById('loadingCard').classList.remove('show');
     document.getElementById('uploadCard').style.display = 'block';
+    const errorBox = document.getElementById('errorBox');
     errorBox.textContent = '❌ Napaka: ' + err.message;
     errorBox.classList.add('show');
   }
@@ -604,13 +662,16 @@ function novaPolica() {
   selectedFile = null;
   generatedMail = '';
   generatedZadeva = '';
-  fileInput.value = '';
-  fileSelected.classList.remove('show');
-  generateBtn.disabled = true;
-  errorBox.classList.remove('show');
+  document.getElementById('fileInput').value = '';
+  document.getElementById('fileSelected').classList.remove('show');
+  document.getElementById('errorBox').classList.remove('show');
   document.getElementById('uploadCard').style.display = 'block';
   document.getElementById('resultCard').classList.remove('show');
+  osvežiGumb();
 }
+
+// Init
+posodobiApiUI();
 </script>
 </body>
 </html>
