@@ -1,0 +1,27 @@
+POLICA PAKET DOM
+Vzorec, ne prava stranka.
+
+Zavarovalec: Maja Vzorec
+Naslov: Vzorčna cesta 4, 2000 Maribor
+EMŠO: 1502199501234
+Davčna številka: 87654321
+E-pošta: maja.vzorec@example.com
+Telefon: 031 555 019
+IBAN: SI56000000000000000
+Zavarovalni zastopnik: Žan Mažgon
+
+Stanovanje v bloku, etaža
+Leto izgradnje: 1998
+Število gospodinjstev: 1
+Material: opeka
+Kritina: opeka
+Bivalni prostor: 65 m2
+Terasa: 8 m2
+Klet: 0 m2
+Koristna: 73 m2
+
+Sklop 1 nepremičnina na novo vrednost 180000 EUR
+Sklop 5 odgovornost 50000 EUR
+Franšiza: brez
+
+SKUPNA LETNA PREMIJA: 210 EUR
