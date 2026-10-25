@@ -1,0 +1,41 @@
+GENERALI ZAVAROVALNICA d.d.
+POLICA ZA AVTOMOBILSKO ZAVAROVANJE
+Vzorec, ne prava stranka.
+
+Zavarovalec: Janez Testnik
+Naslov: Testna ulica 12, 1000 Ljubljana
+EMŠO: 0101995500111
+Davčna številka: 12345678
+E-pošta: janez.testnik@example.com
+Telefon: +386 41 000 000
+IBAN: SI56 0000 0000 0000 000
+
+Zavarovalni zastopnik: Žan Mažgon
+
+Vozilo: Volkswagen Golf
+Registrska: LJ TEST1
+VIN: WVWZZZTEST0000001
+
+AO stvari 5.000.000 EUR
+AO osebe 6.000.000 EUR
+AO-ZAMRZNJEN
+AO+ 50.000 EUR
+Nezgoda smrt 10.000 invalidnost 20.000
+Pravna zaščita 8.000 EUR
+Asistenca L
+
+Kasko
+Odkup prve škode AK
+Prometna nesreča franšiza 5% 150 EUR
+Požar
+Narava
+Zlonamerna in objestna dejanja
+Parkirišče franšiza 1% 30 EUR
+Stekla franšiza 0%
+Svetlobna telesa in ogledala franšiza 10% 40 EUR
+Živali franšiza 5% 80 EUR
+
+SKUPNA LETNA PREMIJA: 486,50 EUR
+
+Dokument 3210999500111
+Rojstni podatek 1502199509999

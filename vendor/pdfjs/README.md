@@ -1,0 +1,1 @@
+pdf.js 6.4.299 (Mozilla), legacy build, Apache-2.0. Datoteki `pdf.min.mjs` in `pdf.worker.min.mjs` sta v repozitoriju, da stran ne kliče CDN-ja. Vir: https://github.com/mozilla/pdf.js/releases/tag/v6.4.299
